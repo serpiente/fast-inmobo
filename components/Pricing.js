@@ -16,8 +16,8 @@ const plans = [
     name: "ENTERPRISE GALILEO",
     price: "300.000",
     priceLabel: "mensual",
-    description: "Según tamaño inventario",
-    subtitle: "150 Inmuebles",
+    description: "Incluye 150 inmuebles",
+    subtitle: "+$50.000 por cada 50 inmuebles",
     isFeatured: true,
     features: [
       "Certificados ILIMITADOS",
@@ -33,7 +33,7 @@ const plans = [
     price: "350.000",
     priceLabel: "mensual",
     description: "Según número de agentes",
-    subtitle: "0 Agentes",
+    subtitle: "+$15.000 por agente",
     isFeatured: false,
     features: [
       "Bot para asignar leads compradores",

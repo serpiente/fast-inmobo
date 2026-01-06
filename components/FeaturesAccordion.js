@@ -30,7 +30,7 @@ const features = [
     ),
   },
   {
-    title: "Asignación al instante",
+    title: "Agente asignado al instante",
     description:
       "Tu lead recibe respuesta en segundos, no en horas. El agente correcto lo atiende antes de que pierda interés.",
     type: "video",
@@ -140,6 +140,16 @@ const Media = ({ feature }) => {
     const video = videoRef.current;
     let animationId;
 
+    // iOS requires manual play trigger
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch (e) {
+        // Autoplay was prevented, that's ok
+      }
+    };
+    playVideo();
+
     const updateProgress = () => {
       if (video.duration) {
         setProgress((video.currentTime / video.duration) * 100);
@@ -157,14 +167,14 @@ const Media = ({ feature }) => {
         <video
           ref={videoRef}
           className={style}
+          src={path}
           autoPlay
           muted
           loop
           playsInline
-          src={path}
-        >
-          <source src={path} type={format} />
-        </video>
+          preload="auto"
+          webkit-playsinline="true"
+        />
         {/* Progress bar */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-base-300/50 rounded-b-2xl overflow-hidden">
           <div
