@@ -218,10 +218,10 @@ const FeatureBlock = ({ feature, reversed, isFirst }) => {
   const { title, description, svg } = feature;
 
   return (
-    <div className={`pb-8 md:pb-10 ${!isFirst ? "pt-8 md:pt-10" : ""}`}>
+    <div>
       {/* Divider line - 75% width, centered */}
       {!isFirst && (
-        <div className="flex justify-center mb-8 md:mb-10">
+        <div className="flex justify-center py-10 md:py-12">
           <div className="w-3/4 h-0.5 bg-base-300" />
         </div>
       )}
