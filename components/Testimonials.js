@@ -37,7 +37,7 @@ const renderTextWithBold = (text) => {
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="flex flex-col h-full p-6 md:p-8 bg-base-100 rounded-2xl">
+    <div className="flex flex-col h-full p-6 md:p-8 bg-base-200 rounded-2xl">
       {/* Logo */}
       <div className="mb-4">
         {testimonial.logo ? (
@@ -79,7 +79,7 @@ const TestimonialCard = ({ testimonial }) => {
 
 const Testimonials = () => {
   return (
-    <section className="bg-base-200 py-24" id="testimonials">
+    <section className="bg-base-100 py-24" id="testimonials">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header */}
         <div className="text-center mb-16">
