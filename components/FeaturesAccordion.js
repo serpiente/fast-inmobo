@@ -80,7 +80,7 @@ const features = [
   {
     title: "IA que resuelve dudas",
     description:
-      "El cliente pregunta metros, precio, amenidades—y recibe respuesta inmediata. Tu agente entra cuando el lead ya está caliente.",
+      "El cliente pregunta por metros, precio o amenidades y recibe respuesta al instante. Tú entras cuando necesita un experto, no un bot.",
     type: "video",
     path: "/videos/features/04-ia-dudas.mp4",
     format: "video/mp4",
