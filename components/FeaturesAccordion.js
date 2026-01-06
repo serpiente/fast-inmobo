@@ -8,7 +8,7 @@ const features = [
   {
     title: "Identificación automática",
     description:
-      "El sistema reconoce automáticamente el inmueble mediante código, conectando al cliente con la propiedad correcta al instante.",
+      "Cero confusión: el cliente pregunta por una propiedad y el sistema ya sabe cuál es. Sin preguntas innecesarias, sin tiempo perdido.",
     type: "video",
     path: "/videos/features/01-reconocimiento-propiedad.mp4",
     format: "video/mp4",
@@ -30,9 +30,9 @@ const features = [
     ),
   },
   {
-    title: "Asignación inteligente",
+    title: "Asignación al instante",
     description:
-      "Cada lead se asigna inmediatamente al agente disponible, garantizando atención personalizada sin demoras.",
+      "Tu lead recibe respuesta en segundos, no en horas. El agente correcto lo atiende antes de que pierda interés.",
     type: "video",
     path: "/videos/features/02-asignacion-agente.mp4",
     format: "video/mp4",
@@ -54,9 +54,9 @@ const features = [
     ),
   },
   {
-    title: "Perfilamiento de leads",
+    title: "Perfilamiento automático",
     description:
-      "La IA perfila automáticamente las necesidades y presupuesto del cliente antes de la primera llamada.",
+      "Antes de la primera llamada, ya sabes qué busca, cuánto puede pagar y si va en serio. Conversaciones que avanzan desde el minuto uno.",
     type: "video",
     path: "/videos/features/03-calificacion-lead.mp4",
     format: "video/mp4",
@@ -78,9 +78,9 @@ const features = [
     ),
   },
   {
-    title: "IA que responde",
+    title: "IA que resuelve dudas",
     description:
-      "Un asistente IA entrenado responde datos técnicos de la propiedad: metros, amenidades, precios y más.",
+      "El cliente pregunta metros, precio, amenidades—y recibe respuesta inmediata. Tu agente entra cuando el lead ya está caliente.",
     type: "video",
     path: "/videos/features/04-ia-dudas.mp4",
     format: "video/mp4",
@@ -102,9 +102,9 @@ const features = [
     ),
   },
   {
-    title: "Agendamiento inteligente",
+    title: "Agendamiento sin fricción",
     description:
-      "La IA gestiona la agenda, valida disponibilidad y propone citas que funcionan para ambas partes.",
+      "Nada de 'te marco luego'. La IA propone horarios reales y agenda la cita en automático. Más citas confirmadas, menos idas y vueltas.",
     type: "video",
     path: "/videos/features/05-agendamiento.mp4",
     format: "video/mp4",
@@ -126,9 +126,9 @@ const features = [
     ),
   },
   {
-    title: "Confirmación humana",
+    title: "Cierre con toque humano",
     description:
-      "El agente interviene desde el CRM para confirmar la cita y cerrar el proceso con toque personal.",
+      "El agente confirma personalmente desde el CRM. El cliente siente atención real, tú mantienes el control total.",
     type: "video",
     path: "/videos/features/06-cierre-confirmacion.mp4",
     format: "video/mp4",
