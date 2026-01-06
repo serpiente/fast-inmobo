@@ -260,12 +260,12 @@ const FeaturesAccordion = () => {
       id="features"
     >
       <div className="px-8">
-        <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-10 md:mb-14">
-          Todo lo que necesitas para{" "}
-          <span className="bg-neutral text-neutral-content px-2 md:px-4 py-1 md:py-0 leading-normal box-decoration-clone">
-            cerrar más ventas
-          </span>
+        <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-4">
+          Un lead llega. Esto pasa.
         </h2>
+        <p className="text-lg md:text-xl text-base-content/70 mb-10 md:mb-14 max-w-3xl">
+          Las preguntas repetitivas, la asignación manual, el ir y venir para agendar. Chat Estelar se encarga. Tú te encargas de cerrar.
+        </p>
 
         {/* Feature blocks */}
         <div>
