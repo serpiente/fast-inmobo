@@ -102,9 +102,9 @@ const features = [
     ),
   },
   {
-    title: "Agendamiento sin fricción",
+    title: "Agenda inteligente, control total",
     description:
-      "Nada de 'te marco luego'. La IA propone horarios reales y agenda la cita en automático. Más citas confirmadas, menos idas y vueltas.",
+      "La IA filtra horarios imposibles y te propone los viables. Tú apruebas, el cliente recibe confirmación al instante.",
     type: "video",
     path: "/videos/features/05-agendamiento.mp4",
     format: "video/mp4",
