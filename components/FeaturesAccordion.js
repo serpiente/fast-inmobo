@@ -80,7 +80,7 @@ const features = [
   {
     title: "Agenda inteligente, control total",
     description:
-      "La IA filtra horarios imposibles y te propone los viables. Tú apruebas, el cliente recibe confirmación al instante.",
+      "La IA filtra los horarios disponibles de tus agentes y te propone los viables. Tú apruebas, el cliente recibe confirmación al instante.",
     type: "video",
     path: "/videos/features/05-agendamiento.mp4",
     format: "video/mp4",
