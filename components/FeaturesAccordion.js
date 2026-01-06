@@ -6,7 +6,7 @@ import Image from "next/image";
 // Features array - 5 features with videos
 const features = [
   {
-    title: "Identificación automática",
+    title: "Identificación automática de inmuebles",
     description:
       "Cero confusión: el cliente pregunta por una propiedad y el sistema ya sabe cuál es. Sin preguntas innecesarias, sin tiempo perdido.",
     type: "video",
