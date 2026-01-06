@@ -231,20 +231,20 @@ const FeatureBlock = ({ feature, reversed, isFirst }) => {
         } gap-8 lg:gap-16 items-center`}
       >
       {/* Text content */}
-      <div className="flex-1 space-y-4">
+      <div className="flex-1 lg:flex-[3] space-y-5">
         <div className="flex items-center gap-3">
           <span className="text-primary">{svg}</span>
-          <h3 className="text-2xl md:text-3xl font-bold text-base-content">
+          <h3 className="text-3xl md:text-4xl font-bold text-base-content">
             {title}
           </h3>
         </div>
-        <p className="text-lg text-base-content/70 leading-relaxed">
+        <p className="text-xl text-base-content/70 leading-relaxed">
           {description}
         </p>
       </div>
 
         {/* Media */}
-        <div className="flex-1 w-full">
+        <div className="flex-1 lg:flex-[2] w-full">
           <Media feature={feature} />
         </div>
       </div>
