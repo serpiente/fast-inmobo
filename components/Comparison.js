@@ -10,6 +10,7 @@ const features = [
   { full: "App móvil iOS y Android", short: "App móvil" },
   { full: "Historial completo del lead (asignación, citas, mensajes)", short: "Historial del lead" },
   { full: "Mensajes ilimitados sin costos adicionales", short: "Mensajes ilimitados", highlight: true },
+  { full: "Sin costos de implementación", short: "Sin costo setup", highlight: true },
 ];
 
 const competitors = [
@@ -18,21 +19,21 @@ const competitors = [
     shortName: "Nosotros",
     logo: "/inmobo-logo.png",
     isUs: true,
-    features: [true, true, true, true, true, true, true, true, true],
+    features: [true, true, true, true, true, true, true, true, true, true],
   },
   {
     name: "Palomma",
     shortName: "Palomma",
     logo: "/logos/palomma.png",
     isUs: false,
-    features: [false, true, false, false, false, true, false, false, false],
+    features: [false, true, false, false, false, true, false, false, false, null],
   },
   {
     name: "Rentmies",
     shortName: "Rentmies",
     logo: "/logos/rentmies.png",
     isUs: false,
-    features: [true, false, false, true, false, false, true, false, false],
+    features: [true, false, false, true, false, false, true, false, false, null],
   },
 ];
 
@@ -64,6 +65,12 @@ const XIcon = () => (
       clipRule="evenodd"
     />
   </svg>
+);
+
+const UnknownIcon = () => (
+  <div className="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+    <div className="w-4 md:w-5 h-0.5 bg-base-content/30 rounded-full" />
+  </div>
 );
 
 const Comparison = () => {
@@ -145,7 +152,9 @@ const Comparison = () => {
                       }`}
                     >
                       <div className="flex justify-center">
-                        {competitor.features[featureIndex] ? <CheckIcon /> : <XIcon />}
+                        {competitor.features[featureIndex] === true && <CheckIcon />}
+                        {competitor.features[featureIndex] === false && <XIcon />}
+                        {competitor.features[featureIndex] === null && <UnknownIcon />}
                       </div>
                     </td>
                   ))}
