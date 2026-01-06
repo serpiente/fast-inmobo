@@ -43,24 +43,22 @@ const Problem = () => {
   return (
     <section className="bg-neutral text-neutral-content">
       <div className="max-w-7xl mx-auto px-8 py-16 md:py-32 text-center">
-        <h2 className="max-w-3xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
-          80% of startups fail because founders never launch
+        <h2 className="max-w-4xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
+          Por cada <span className="text-primary">100 leads</span>, tu equipo gasta <span className="text-primary">30+ horas</span> en trabajo manual—y tú no tienes forma de saber qué está funcionando.
         </h2>
         <p className="max-w-xl mx-auto text-lg opacity-90 leading-relaxed mb-12 md:mb-20">
-          Emails, DNS records, user authentication... There&apos;s so much going
-          on.
-        </p>
+        Inmobo asigna cada lead al agente correcto, centraliza toda la información y te muestra exactamente qué está pasando—sin trabajo manual.        </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
-          <Step emoji="🧑‍💻" text="8 hrs to add Stripe" />
+          <Step emoji="📥" text="Leads llegan de todos lados" />
 
           <Arrow extraStyle="max-md:-scale-x-100 md:-rotate-90" />
 
-          <Step emoji="😮‍💨" text="Struggle to find time" />
+          <Step emoji="✍️" text="Asignación y seguimiento manual" />
 
           <Arrow extraStyle="md:-scale-x-100 md:-rotate-90" />
 
-          <Step emoji="😔" text="Quit project" />
+          <Step emoji="🤷" text="Sin visibilidad de resultados" />
         </div>
       </div>
     </section>

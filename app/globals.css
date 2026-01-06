@@ -3,6 +3,16 @@
   themes: light --default;
 }
 
+/* Paleta Inmobo */
+:root {
+  --color-primary: #F6BE00;         /* Amarillo/Dorado - botones principales */
+  --color-primary-content: #000000;
+  --color-secondary: #06b6d4;       /* Cyan - acentos */
+  --color-secondary-content: #ffffff;
+  --color-accent: #06b6d4;          /* Cyan - elementos destacados */
+  --color-accent-content: #ffffff;
+}
+
 @theme {
   --font-display: "Satoshi", "sans-serif";
   
@@ -53,8 +63,8 @@ progress::-webkit-progress-value {
 }
 
 .btn-gradient {
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82) !important;
-  background-size: 300% 300% !important;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4) !important;
+  background-size: 200% 200% !important;
   animation: var(--animate-shimmer) !important;
   border: 0 !important;
   border-color: transparent !important;
@@ -73,4 +83,18 @@ progress::-webkit-progress-value {
 
 .btn {
   text-transform: capitalize !important;
+}
+
+/* Logo Carousel Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

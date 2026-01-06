@@ -1,9 +1,9 @@
 const config = {
   // REQUIRED
-  appName: "ShipFast Supabase",
+  appName: "Inmobo",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "The NextJS boilerplate with all you need to build your SaaS, AI tool, or any other web app.",
+    "Del primer contacto al cierre: rastrea el recorrido de cada cliente",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "shipfa.st",
   crisp: {

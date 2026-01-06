@@ -7,22 +7,59 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
-  },
-  {
-    question: "Can I get a refund?",
+    question: "¿Con qué canales se integra Inmobo?",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        Portales inmobiliarios principales de tu país, Facebook Leads, Instagram, Google Ads, tu sitio web y WhatsApp Business. Si usas otro canal, pregúntanos.
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "¿Cuánto toma implementarlo?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <p>
+        La mayoría de las agencias están funcionando en menos de una semana. Te ayudamos con la configuración inicial.
+      </p>
+    ),
+  },
+  {
+    question: "¿Mis agentes tienen que aprender un sistema nuevo?",
+    answer: (
+      <p>
+        Inmobo es muy simple. Además, los agentes pueden seguir usando WhatsApp—nosotros capturamos la información automáticamente.
+      </p>
+    ),
+  },
+  {
+    question: "¿Qué pasa si un agente no responde a tiempo?",
+    answer: (
+      <p>
+        Puedes configurar reasignación automática. Si el agente no contacta al lead en X minutos, pasa al siguiente.
+      </p>
+    ),
+  },
+  {
+    question: "¿Puedo ver reportes de desempeño por agente?",
+    answer: (
+      <p>
+        Sí. Ves tiempo de respuesta, leads atendidos, tasa de conversión y más—por agente, por fuente y por etapa del embudo.
+      </p>
+    ),
+  },
+  {
+    question: "¿Funciona para agencias pequeñas?",
+    answer: (
+      <p>
+        Sí. Tenemos agencias desde 2 agentes hasta más de 50. El plan Starter está pensado para equipos pequeños.
+      </p>
+    ),
+  },
+  {
+    question: "¿Hay contrato de permanencia?",
+    answer: (
+      <p>
+        No. Pagas mes a mes y puedes cancelar cuando quieras.
+      </p>
     ),
   },
 ];
@@ -94,7 +131,7 @@ const FAQ = () => {
         <div className="flex flex-col text-left basis-1/2">
           <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
           <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            Frequently Asked Questions
+            Preguntas Frecuentes
           </p>
         </div>
 
