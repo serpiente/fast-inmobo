@@ -1,20 +1,20 @@
 import Image from "next/image";
 
 const logos = [
-  { name: "Cliente 1", src: "/logos/logo-01.jpg" },
-  { name: "Cliente 2", src: "/logos/logo-02.jpg" },
-  { name: "Cliente 3", src: "/logos/logo-03.jpg" },
-  { name: "Cliente 4", src: "/logos/logo-04.jpg" },
-  { name: "Cliente 5", src: "/logos/logo-05.jpg" },
-  { name: "Cliente 6", src: "/logos/logo-06.jpg" },
-  { name: "Cliente 7", src: "/logos/logo-07.jpg" },
-  { name: "Cliente 8", src: "/logos/logo-08.jpg" },
-  { name: "Cliente 9", src: "/logos/logo-09.jpg" },
-  { name: "Cliente 10", src: "/logos/logo-10.jpg" },
-  { name: "Cliente 11", src: "/logos/logo-11.jpg" },
-  { name: "Cliente 12", src: "/logos/logo-12.jpg" },
-  { name: "Cliente 13", src: "/logos/logo-13.jpg" },
-  { name: "Cliente 14", src: "/logos/logo-14.jpg" },
+  { name: "Century 21 Metropolitan", src: "/logos/century21-metropolitan.jpg" },
+  { name: "Engel & Völkers", src: "/logos/engel-volkers.jpg" },
+  { name: "Fedelonjas", src: "/logos/fedelonjas.jpg" },
+  { name: "Century 21", src: "/logos/century21.jpg" },
+  { name: "El Solar", src: "/logos/el-solar.jpg" },
+  { name: "Century 21 Abundanza", src: "/logos/century21-abundanza.jpg" },
+  { name: "deBedout", src: "/logos/debedout.jpg" },
+  { name: "Keller Williams Santa Ana", src: "/logos/keller-williams-santa-ana.jpg" },
+  { name: "RE/MAX Planet", src: "/logos/remax-planet.jpg" },
+  { name: "RE/MAX Capital", src: "/logos/remax-capital.jpg" },
+  { name: "Cool House", src: "/logos/cool-house.jpg" },
+  { name: "Area IN Inmobiliaria", src: "/logos/area-in-inmobiliaria.jpg" },
+  { name: "RE/MAX Conecta", src: "/logos/remax-conecta.jpg" },
+  { name: "Brikss", src: "/logos/brikss.jpg" },
 ];
 
 const LogoCarousel = () => {
