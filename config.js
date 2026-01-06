@@ -1,11 +1,11 @@
 const config = {
   // REQUIRED
-  appName: "Inmobo",
+  appName: "Chat Estelar | CRM Inmobiliario con IA",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "Del primer contacto al cierre: rastrea el recorrido de cada cliente",
+    "Asigna leads automáticamente, responde dudas con IA y agenda citas sin intervención manual. El CRM que convierte más leads en visitas para inmobiliarias.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "shipfa.st",
+  domainName: "chatestelar.com",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (resend.supportEmail) otherwise customer support won't work.
     id: "",
