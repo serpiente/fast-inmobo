@@ -1,14 +1,17 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
-// Features array - each feature has its own media
+// Features array - 6 features with videos
 const features = [
   {
-    title: "Captación multicanal",
+    title: "Identificación automática",
     description:
-      "Conecta portales inmobiliarios, Facebook Leads, Instagram, Google Ads, tu sitio web y WhatsApp Business en un solo lugar.",
-    type: "image",
-    path: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80",
-    alt: "Dashboard de captación",
+      "El sistema reconoce automáticamente el inmueble mediante código, conectando al cliente con la propiedad correcta al instante.",
+    type: "video",
+    path: "/videos/features/01-reconocimiento-propiedad.mp4",
+    format: "video/mp4",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,18 +23,19 @@ const features = [
       >
         <path
           strokeLinecap="round"
-          d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
+          strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
         />
       </svg>
     ),
   },
   {
-    title: "Asignación automática",
+    title: "Asignación inteligente",
     description:
-      "Cada lead se asigna automáticamente al agente correcto según tus reglas: zona, tipo de propiedad, disponibilidad o round-robin.",
-    type: "image",
-    path: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    alt: "Asignación de leads",
+      "Cada lead se asigna inmediatamente al agente disponible, garantizando atención personalizada sin demoras.",
+    type: "video",
+    path: "/videos/features/02-asignacion-agente.mp4",
+    format: "video/mp4",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,12 +54,36 @@ const features = [
     ),
   },
   {
-    title: "Seguimiento en WhatsApp",
+    title: "Perfilamiento de leads",
     description:
-      "Los agentes pueden seguir usando WhatsApp. Chat Estelar captura las conversaciones automáticamente para que tengas visibilidad completa.",
-    type: "image",
-    path: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    alt: "WhatsApp Business",
+      "La IA perfila automáticamente las necesidades y presupuesto del cliente antes de la primera llamada.",
+    type: "video",
+    path: "/videos/features/03-calificacion-lead.mp4",
+    format: "video/mp4",
+    svg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-8 h-8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "IA que responde",
+    description:
+      "Un asistente IA entrenado responde datos técnicos de la propiedad: metros, amenidades, precios y más.",
+    type: "video",
+    path: "/videos/features/04-ia-dudas.mp4",
+    format: "video/mp4",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +102,12 @@ const features = [
     ),
   },
   {
-    title: "Reportes y métricas",
+    title: "Agendamiento inteligente",
     description:
-      "Visualiza tiempo de respuesta, leads atendidos, tasa de conversión y más—por agente, por fuente y por etapa del embudo.",
-    type: "image",
-    path: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    alt: "Dashboard de métricas",
+      "La IA gestiona la agenda, valida disponibilidad y propone citas que funcionan para ambas partes.",
+    type: "video",
+    path: "/videos/features/05-agendamiento.mp4",
+    format: "video/mp4",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +120,31 @@ const features = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Confirmación humana",
+    description:
+      "El agente interviene desde el CRM para confirmar la cita y cerrar el proceso con toque personal.",
+    type: "video",
+    path: "/videos/features/06-cierre-confirmacion.mp4",
+    format: "video/mp4",
+    svg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-8 h-8"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
     ),
@@ -103,19 +155,48 @@ const features = [
 const Media = ({ feature }) => {
   const { type, path, format, alt } = feature;
   const style = "rounded-2xl w-full shadow-lg";
+  const videoRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (type !== "video" || !videoRef.current) return;
+
+    const video = videoRef.current;
+    let animationId;
+
+    const updateProgress = () => {
+      if (video.duration) {
+        setProgress((video.currentTime / video.duration) * 100);
+      }
+      animationId = requestAnimationFrame(updateProgress);
+    };
+
+    animationId = requestAnimationFrame(updateProgress);
+    return () => cancelAnimationFrame(animationId);
+  }, [type]);
 
   if (type === "video") {
     return (
-      <video
-        className={style}
-        autoPlay
-        muted
-        loop
-        playsInline
-        src={path}
-      >
-        <source src={path} type={format} />
-      </video>
+      <div className="relative">
+        <video
+          ref={videoRef}
+          className={style}
+          autoPlay
+          muted
+          loop
+          playsInline
+          src={path}
+        >
+          <source src={path} type={format} />
+        </video>
+        {/* Progress bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-base-300/50 rounded-b-2xl overflow-hidden">
+          <div
+            className="h-full bg-primary"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+      </div>
     );
   } else if (type === "image") {
     return (
@@ -133,15 +214,22 @@ const Media = ({ feature }) => {
 };
 
 // Feature block component - static, no accordion
-const FeatureBlock = ({ feature, reversed }) => {
+const FeatureBlock = ({ feature, reversed, isFirst }) => {
   const { title, description, svg } = feature;
 
   return (
-    <div
-      className={`flex flex-col ${
-        reversed ? "lg:flex-row-reverse" : "lg:flex-row"
-      } gap-8 lg:gap-16 items-center`}
-    >
+    <div className={`pb-12 md:pb-16 ${!isFirst ? "pt-12 md:pt-16" : ""}`}>
+      {/* Divider line - 75% width, centered */}
+      {!isFirst && (
+        <div className="flex justify-center mb-12 md:mb-16">
+          <div className="w-3/4 h-0.5 bg-base-300" />
+        </div>
+      )}
+      <div
+        className={`flex flex-col ${
+          reversed ? "lg:flex-row-reverse" : "lg:flex-row"
+        } gap-8 lg:gap-16 items-center`}
+      >
       {/* Text content */}
       <div className="flex-1 space-y-4">
         <div className="flex items-center gap-3">
@@ -155,9 +243,10 @@ const FeatureBlock = ({ feature, reversed }) => {
         </p>
       </div>
 
-      {/* Media */}
-      <div className="flex-1 w-full">
-        <Media feature={feature} />
+        {/* Media */}
+        <div className="flex-1 w-full">
+          <Media feature={feature} />
+        </div>
       </div>
     </div>
   );
@@ -179,12 +268,13 @@ const FeaturesAccordion = () => {
         </h2>
 
         {/* Feature blocks */}
-        <div className="space-y-16 md:space-y-24">
+        <div>
           {features.map((feature, i) => (
             <FeatureBlock
               key={feature.title}
               feature={feature}
               reversed={i % 2 === 1}
+              isFirst={i === 0}
             />
           ))}
         </div>
