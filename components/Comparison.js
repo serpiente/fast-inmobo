@@ -11,6 +11,7 @@ const features = [
   { full: "Historial completo del lead (asignación, citas, mensajes)", short: "Historial del lead" },
   { full: "Mensajes ilimitados sin costos adicionales", short: "Mensajes ilimitados", highlight: true },
   { full: "Sin costos de implementación", short: "Sin costo setup", highlight: true },
+  { full: "Un solo WhatsApp para ventas y administración", short: "WhatsApp único", highlight: true },
 ];
 
 const competitors = [
@@ -19,21 +20,21 @@ const competitors = [
     shortName: "Nosotros",
     logo: "/inmobo-logo.png",
     isUs: true,
-    features: [true, true, true, true, true, true, true, true, true, true],
+    features: [true, true, true, true, true, true, true, true, true, true, true],
   },
   {
     name: "Palomma",
     shortName: "Palomma",
     logo: "/logos/palomma.png",
     isUs: false,
-    features: [false, true, false, false, false, true, false, false, false, false],
+    features: [false, true, false, false, false, true, false, false, false, false, false],
   },
   {
     name: "Rentmies",
     shortName: "Rentmies",
     logo: "/logos/rentmies.png",
     isUs: false,
-    features: [true, false, false, true, false, false, true, false, false, null],
+    features: [true, false, false, true, false, false, true, false, false, null, false],
   },
 ];
 
