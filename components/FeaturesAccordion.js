@@ -197,7 +197,7 @@ const FeaturesAccordion = () => {
       <div className="px-8">
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
           Todo lo que necesitas para
-          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap">
+          <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed md:whitespace-nowrap inline-block mt-2 md:mt-0">
             cerrar más ventas
           </span>
         </h2>

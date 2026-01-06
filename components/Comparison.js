@@ -9,6 +9,7 @@ const features = [
   "Integraciones con portales inmobiliarios",
   "App móvil iOS y Android",
   "Sin límite de agentes",
+  "Precio fijo (sin cobro por conversación)",
 ];
 
 const competitors = [
@@ -16,19 +17,19 @@ const competitors = [
     name: "Chat Estelar",
     logo: "/inmobo-logo.png",
     isUs: true,
-    features: [true, true, true, true, true, true, true, true],
+    features: [true, true, true, true, true, true, true, true, true],
   },
   {
-    name: "Paloma Ella",
-    logo: null,
+    name: "Palomma",
+    logo: "/logos/palomma.png",
     isUs: false,
-    features: [false, true, false, false, false, true, false, false],
+    features: [false, true, false, false, false, true, false, false, false],
   },
   {
-    name: "Red Mies",
-    logo: null,
+    name: "Rentmies",
+    logo: "/logos/rentmies.png",
     isUs: false,
-    features: [true, false, false, true, false, false, true, false],
+    features: [true, false, false, true, false, false, true, false, false],
   },
 ];
 
