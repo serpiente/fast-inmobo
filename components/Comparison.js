@@ -8,6 +8,7 @@ const features = [
   { full: "Soporte 24/7", short: "Soporte 24/7" },
   { full: "Integraciones con portales inmobiliarios", short: "Portales inmobiliarios" },
   { full: "App móvil iOS y Android", short: "App móvil" },
+  { full: "Historial completo del lead (asignación, citas, mensajes)", short: "Historial del lead" },
   { full: "Mensajes ilimitados sin costos adicionales", short: "Mensajes ilimitados", highlight: true },
 ];
 
@@ -17,21 +18,21 @@ const competitors = [
     shortName: "Nosotros",
     logo: "/inmobo-logo.png",
     isUs: true,
-    features: [true, true, true, true, true, true, true, true],
+    features: [true, true, true, true, true, true, true, true, true],
   },
   {
     name: "Palomma",
     shortName: "Palomma",
     logo: "/logos/palomma.png",
     isUs: false,
-    features: [false, true, false, false, false, true, false, false],
+    features: [false, true, false, false, false, true, false, false, false],
   },
   {
     name: "Rentmies",
     shortName: "Rentmies",
     logo: "/logos/rentmies.png",
     isUs: false,
-    features: [true, false, false, true, false, false, true, false],
+    features: [true, false, false, true, false, false, true, false, false],
   },
 ];
 
