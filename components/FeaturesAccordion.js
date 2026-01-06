@@ -208,7 +208,7 @@ const FeatureBlock = ({ feature, reversed, isFirst }) => {
       {/* Divider line - 75% width, centered */}
       {!isFirst && (
         <div className="flex justify-center py-10 md:py-12">
-          <div className="w-3/4 h-0.5 bg-base-300" />
+          <div className="w-3/4 h-0.5 bg-base-content/20" />
         </div>
       )}
       <div
