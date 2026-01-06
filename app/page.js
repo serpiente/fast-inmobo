@@ -5,6 +5,7 @@ import Problem from "@/components/Problem";
 import FeaturesAccordion from "@/components/FeaturesAccordion";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
+import Comparison from "@/components/Comparison";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <FeaturesAccordion />
         <Pricing />
         <Testimonials />
+        <Comparison />
         <FAQ />
         <CTA />
       </main>
