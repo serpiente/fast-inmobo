@@ -15,7 +15,7 @@ const Hero = () => {
             <button className="btn btn-primary btn-wide">
               Agendar Demo
             </button>
-            <p className="text-sm text-base-content/60">
+            <p className="text-xs text-base-content/50">
               Únete a las 10+ inmobiliarias que ya nos usan
             </p>
           </div>
