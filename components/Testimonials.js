@@ -5,7 +5,7 @@ const testimonials = [
     name: "Julián DeBedout",
     role: "Director General",
     company: "Inmobiliaria deBedout",
-    text: "¡Excelente experiencia con la app Inmobo! La interfaz es intuitiva, han creado opciones a medida de nuestra inmobiliaria y recibimos soporte 24/7. Como CEO me ha permitido tener mayor control y supervisión en operaciones con brokers y procesos mejorando el servicio que prestamos a nuestros clientes. ¡Definitivamente la recomiendo!",
+    text: "¡Excelente experiencia con la app Inmobo! La interfaz es **intuitiva**, han creado opciones a medida de nuestra inmobiliaria y recibimos **soporte 24/7**. Como CEO me ha permitido tener **mayor control y supervisión** en operaciones con brokers y procesos mejorando el servicio que prestamos a nuestros clientes. ¡Definitivamente la recomiendo!",
     rating: 5,
     logo: "/logos/debedout.jpg",
   },
@@ -13,7 +13,7 @@ const testimonials = [
     name: "Laura Camargo",
     role: "Co-founder & CEO",
     company: "BRIKSS",
-    text: "Chat estelar es una excelente herramienta que nos ha permitido centralizar todos los contactos en un solo lugar, responder más rápido y no perder oportunidades por falta de seguimiento. Chat Estelar es intuitivo, eficiente y se adapta muy bien al día a día de nuestro equipo comercial. Gracias a su automatización y organización, hemos mejorado notablemente la gestión de leads y la conversión. Sin duda, es una solución clave para cualquier inmobiliaria que quiera profesionalizar su atención al cliente.",
+    text: "Chat estelar es una excelente herramienta que nos ha permitido **centralizar todos los contactos** en un solo lugar, **responder más rápido** y **no perder oportunidades** por falta de seguimiento. Chat Estelar es intuitivo, eficiente y se adapta muy bien al día a día de nuestro equipo comercial. Gracias a su automatización y organización, hemos mejorado notablemente la **gestión de leads y la conversión**. Sin duda, es una solución clave para cualquier inmobiliaria que quiera profesionalizar su atención al cliente.",
     rating: 5,
     logo: "/logos/brikss.jpg",
   },
@@ -21,10 +21,21 @@ const testimonials = [
     name: "María José Herrera",
     role: "Coordinadora de Ventas",
     company: "Keller Williams Santa Ana",
-    text: "Lo mejor es que mis agentes siguen usando WhatsApp como siempre, pero ahora yo puedo ver todas las conversaciones y métricas en un solo lugar.",
+    text: "Lo mejor es que mis agentes siguen usando WhatsApp como siempre, pero ahora yo puedo ver **todas las conversaciones y métricas** en un solo lugar.",
     rating: 5,
   },
 ];
+
+// Function to render text with **bold** markdown
+const renderTextWithBold = (text) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i} className="font-semibold text-base-content">{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
 
 const StarIcon = () => (
   <svg
@@ -54,7 +65,7 @@ const TestimonialCard = ({ testimonial }) => {
       {/* Quote */}
       <blockquote className="flex-1 mb-6">
         <p className="text-base-content/80 leading-relaxed">
-          &ldquo;{testimonial.text}&rdquo;
+          &ldquo;{renderTextWithBold(testimonial.text)}&rdquo;
         </p>
       </blockquote>
 
