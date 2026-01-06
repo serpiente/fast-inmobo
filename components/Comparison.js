@@ -26,7 +26,7 @@ const competitors = [
     shortName: "Palomma",
     logo: "/logos/palomma.png",
     isUs: false,
-    features: [false, true, false, false, false, true, false, false, false, null],
+    features: [false, true, false, false, false, true, false, false, false, false],
   },
   {
     name: "Rentmies",
