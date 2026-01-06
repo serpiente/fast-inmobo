@@ -256,13 +256,13 @@ const FeatureBlock = ({ feature, reversed, isFirst }) => {
 const FeaturesAccordion = () => {
   return (
     <section
-      className="py-24 md:py-32 max-w-7xl mx-auto bg-base-100"
+      className="py-16 md:py-20 max-w-7xl mx-auto bg-base-100"
       id="features"
     >
       <div className="px-8">
-        <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-16 md:mb-24">
+        <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-10 md:mb-14">
           Todo lo que necesitas para{" "}
-          <span className="bg-neutral text-neutral-content px-2 md:px-4 py-1 md:py-0 leading-loose md:leading-relaxed box-decoration-clone">
+          <span className="bg-neutral text-neutral-content px-2 md:px-4 py-1 md:py-0 leading-normal box-decoration-clone">
             cerrar más ventas
           </span>
         </h2>
