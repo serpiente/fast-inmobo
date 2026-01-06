@@ -10,7 +10,7 @@ const Hero = () => {
             Leads asignados al instante. Trazabilidad sin esfuerzo
           </h1>
           <p className="text-lg opacity-80 leading-relaxed">
-          Inmobo conecta todos tus canales de captación, asigna cada lead automáticamente al agente correcto y te da visibilidad completa de lo que pasa después—sin que nadie tenga que hacerlo manualmente.        </p>
+          Chat Estelar conecta todos tus canales de captación, asigna cada lead automáticamente al agente correcto y te da visibilidad completa de lo que pasa después—sin que nadie tenga que hacerlo manualmente.        </p>
           <div className="flex flex-col items-center lg:items-start gap-3">
             <button className="btn btn-primary btn-wide">
               Agendar Demo
