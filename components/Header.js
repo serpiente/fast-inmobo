@@ -14,6 +14,10 @@ const links = [
     label: "Características",
   },
   {
+    href: "/#comparison",
+    label: "Comparativa",
+  },
+  {
     href: "/#pricing",
     label: "Precios",
   },
