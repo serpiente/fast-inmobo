@@ -260,12 +260,14 @@ const FeaturesAccordion = () => {
       id="features"
     >
       <div className="px-8">
-        <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-4">
-          Un lead llega. Esto pasa.
-        </h2>
-        <p className="text-lg md:text-xl text-base-content/70 mb-10 md:mb-14 max-w-3xl">
-          Las preguntas repetitivas, la asignación manual, el ir y venir para agendar. Chat Estelar se encarga. Tú te encargas de cerrar.
-        </p>
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-4">
+            Un lead llega. Esto pasa.
+          </h2>
+          <p className="text-lg md:text-xl text-base-content/70 max-w-3xl mx-auto">
+            Las preguntas repetitivas, la asignación manual, el ir y venir para agendar. Chat Estelar se encarga. Tú te encargas de cerrar.
+          </p>
+        </div>
 
         {/* Feature blocks */}
         <div>
