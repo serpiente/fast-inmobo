@@ -1,32 +1,35 @@
 import Image from "next/image";
 
 const features = [
-  "Asignación automática de leads",
-  "Integración con WhatsApp Business",
-  "Captura de conversaciones automática",
-  "Reportes en tiempo real",
-  "Soporte 24/7",
-  "Integraciones con portales inmobiliarios",
-  "App móvil iOS y Android",
-  "Sin límite de agentes",
-  "Precio fijo (sin cobro por conversación)",
+  { full: "Asignación automática de leads", short: "Asignación automática" },
+  { full: "Integración con WhatsApp Business", short: "WhatsApp Business" },
+  { full: "Captura de conversaciones automática", short: "Captura conversaciones" },
+  { full: "Reportes en tiempo real", short: "Reportes tiempo real" },
+  { full: "Soporte 24/7", short: "Soporte 24/7" },
+  { full: "Integraciones con portales inmobiliarios", short: "Portales inmobiliarios" },
+  { full: "App móvil iOS y Android", short: "App móvil" },
+  { full: "Sin límite de agentes", short: "Agentes ilimitados" },
+  { full: "Mensajes ilimitados sin costos adicionales", short: "Mensajes ilimitados", highlight: true },
 ];
 
 const competitors = [
   {
     name: "Chat Estelar",
+    shortName: "Nosotros",
     logo: "/inmobo-logo.png",
     isUs: true,
     features: [true, true, true, true, true, true, true, true, true],
   },
   {
     name: "Palomma",
+    shortName: "Palomma",
     logo: "/logos/palomma.png",
     isUs: false,
     features: [false, true, false, false, false, true, false, false, false],
   },
   {
     name: "Rentmies",
+    shortName: "Rentmies",
     logo: "/logos/rentmies.png",
     isUs: false,
     features: [true, false, false, true, false, false, true, false, false],
@@ -38,7 +41,7 @@ const CheckIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="currentColor"
-    className="w-6 h-6 text-green-500"
+    className="w-5 h-5 md:w-6 md:h-6 text-green-500"
   >
     <path
       fillRule="evenodd"
@@ -53,7 +56,7 @@ const XIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="currentColor"
-    className="w-6 h-6 text-red-500"
+    className="w-5 h-5 md:w-6 md:h-6 text-red-500"
   >
     <path
       fillRule="evenodd"
@@ -66,54 +69,55 @@ const XIcon = () => (
 const Comparison = () => {
   return (
     <section className="bg-base-100 py-24" id="comparison">
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-5xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <p className="font-semibold text-primary mb-4">Comparativa</p>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-base-content mb-4">
+          <h2 className="text-2xl md:text-5xl font-extrabold text-base-content mb-4">
             ¿Por qué elegir Chat Estelar?
           </h2>
-          <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+          <p className="text-base-content/70 text-sm md:text-lg max-w-2xl mx-auto">
             Compara nuestras funcionalidades con otras soluciones del mercado
           </p>
         </div>
 
         {/* Comparison Table */}
         <div className="overflow-x-auto">
-          <table className="w-full">
-            {/* Header Row with Logos */}
+          <table className="w-full text-sm md:text-base">
+            {/* Header Row */}
             <thead>
               <tr>
-                <th className="text-left p-4 bg-base-200 rounded-tl-xl">
-                  <span className="text-base-content/60 font-medium">Funcionalidades</span>
+                <th className="text-left p-2 md:p-4 bg-base-200 rounded-tl-xl">
+                  <span className="text-base-content/60 font-medium text-xs md:text-sm">Funcionalidades</span>
                 </th>
                 {competitors.map((competitor, i) => (
                   <th
                     key={i}
-                    className={`p-4 text-center ${
+                    className={`p-2 md:p-4 text-center ${
                       competitor.isUs
                         ? "bg-primary/10 border-2 border-primary border-b-0 rounded-t-xl"
                         : "bg-base-200"
                     } ${i === competitors.length - 1 && !competitor.isUs ? "rounded-tr-xl" : ""}`}
                   >
-                    <div className="flex flex-col items-center gap-2">
-                      {competitor.logo ? (
-                        <div className="h-10 flex items-center justify-center">
-                          <Image
-                            src={competitor.logo}
-                            alt={competitor.name}
-                            width={120}
-                            height={40}
-                            className="h-8 w-auto object-contain"
-                          />
-                        </div>
-                      ) : (
-                        <div className="h-10 flex items-center justify-center">
-                          <span className="font-bold text-base-content">{competitor.name}</span>
-                        </div>
-                      )}
+                    <div className="flex flex-col items-center gap-1 md:gap-2">
+                      {/* Mobile: Just name */}
+                      <span className="md:hidden font-semibold text-xs text-base-content">
+                        {competitor.shortName}
+                      </span>
+
+                      {/* Desktop: Logo */}
+                      <div className="hidden md:flex h-10 items-center justify-center">
+                        <Image
+                          src={competitor.logo}
+                          alt={competitor.name}
+                          width={120}
+                          height={40}
+                          className="h-8 w-auto object-contain"
+                        />
+                      </div>
+
                       {competitor.isUs && (
-                        <span className="text-xs bg-primary text-primary-content px-2 py-0.5 rounded-full font-medium">
+                        <span className="hidden md:inline text-xs bg-primary text-primary-content px-2 py-0.5 rounded-full font-medium">
                           Nosotros
                         </span>
                       )}
@@ -127,11 +131,16 @@ const Comparison = () => {
             <tbody>
               {features.map((feature, featureIndex) => (
                 <tr key={featureIndex} className="border-b border-base-200">
-                  <td className="p-4 text-base-content font-medium">{feature}</td>
+                  <td className="p-2 md:p-4 text-base-content font-medium text-xs md:text-sm">
+                    {/* Mobile: Short name */}
+                    <span className="md:hidden">{feature.short}</span>
+                    {/* Desktop: Full name */}
+                    <span className="hidden md:inline">{feature.full}</span>
+                  </td>
                   {competitors.map((competitor, compIndex) => (
                     <td
                       key={compIndex}
-                      className={`p-4 text-center ${
+                      className={`p-2 md:p-4 text-center ${
                         competitor.isUs ? "bg-primary/5 border-x-2 border-primary" : ""
                       }`}
                     >
@@ -147,19 +156,20 @@ const Comparison = () => {
             {/* Footer Row */}
             <tfoot>
               <tr>
-                <td className="p-4 bg-base-200 rounded-bl-xl"></td>
+                <td className="py-4 md:p-4 bg-base-200 rounded-bl-xl"></td>
                 {competitors.map((competitor, i) => (
                   <td
                     key={i}
-                    className={`p-4 text-center ${
+                    className={`py-4 px-1 md:p-4 text-center ${
                       competitor.isUs
                         ? "bg-primary/10 border-2 border-primary border-t-0 rounded-b-xl"
                         : "bg-base-200"
                     } ${i === competitors.length - 1 && !competitor.isUs ? "rounded-br-xl" : ""}`}
                   >
                     {competitor.isUs && (
-                      <button className="btn btn-primary btn-sm">
-                        Empezar Gratis
+                      <button className="btn btn-primary btn-xs md:btn-sm whitespace-nowrap">
+                        <span className="md:hidden">Empezar</span>
+                        <span className="hidden md:inline">Empezar Gratis</span>
                       </button>
                     )}
                   </td>
